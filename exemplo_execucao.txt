@@ -1,0 +1,192 @@
+EXEMPLO DE EXECUÇÃO - FILA ZERO
+Integrantes: Felipe Arruda Calixto (RM574454) e Felipe Oliveira Barcelos (RM576561) - Turma 1CCPR
+(inclui entradas inválidas propositais: 'quarenta', '0' atendimentos, opção '9')
+
+==============================================================================
+                 FILA ZERO - Monitor de Tempo de Espera nas UBS               
+==============================================================================
+ Problema: longas filas nas Unidades Básicas de Saúde (UBS) fazem o
+ cidadão perder horas e, muitas vezes, desistir do atendimento.
+ Público beneficiado: usuários do SUS, agentes comunitários e gestores
+ de saúde do bairro.
+ Objetivo: registrar o tempo médio de espera de cada UBS, classificar
+ as unidades e gerar indicadores e recomendações para a decisão.
+ ODS 3 - Saúde e Bem-Estar | ODS 10 - Redução das Desigualdades |
+ ODS 11 - Cidades e Comunidades Sustentáveis.
+==============================================================================
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 1
+
+--- Cadastro da UBS nº 1 ---
+Nome da UBS: UBS Bela Vista
+Bairro: Bela Vista
+Tempo médio de espera (minutos): quarenta
+   [!] Digite apenas números inteiros (ex.: 45).
+Tempo médio de espera (minutos): 72
+Atendimentos por dia: 210
+   [OK] UBS 'UBS Bela Vista' cadastrada -> situação: Crítico
+Deseja cadastrar outra UBS? (S/N): S
+
+--- Cadastro da UBS nº 2 ---
+Nome da UBS: UBS Jardim Sul
+Bairro: Campo Limpo
+Tempo médio de espera (minutos): 18
+Atendimentos por dia: 150
+   [OK] UBS 'UBS Jardim Sul' cadastrada -> situação: Adequado
+Deseja cadastrar outra UBS? (S/N): S
+
+--- Cadastro da UBS nº 3 ---
+Nome da UBS: UBS Nova Aurora
+Bairro: Lapa
+Tempo médio de espera (minutos): 55
+Atendimentos por dia: 0
+   [!] O valor deve estar entre 1 e 2000.
+Atendimentos por dia: 190
+   [OK] UBS 'UBS Nova Aurora' cadastrada -> situação: Atenção
+Deseja cadastrar outra UBS? (S/N): N
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 2
+
+------------------------------------------------------------------------------
+ Nº  UBS                      Bairro            Espera Atend./dia  Situação 
+------------------------------------------------------------------------------
+ 1   UBS Bela Vista           Bela Vista         72 min        210  Crítico  
+ 2   UBS Jardim Sul           Campo Limpo        18 min        150  Adequado 
+ 3   UBS Nova Aurora          Lapa               55 min        190  Atenção  
+------------------------------------------------------------------------------
+ Total de UBS cadastradas: 3
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 3
+
+------------------------------------------------------------------------------
+ Nº  UBS                      Bairro            Espera Atend./dia  Situação 
+------------------------------------------------------------------------------
+ 1   UBS Bela Vista           Bela Vista         72 min        210  Crítico  
+ 2   UBS Jardim Sul           Campo Limpo        18 min        150  Adequado 
+ 3   UBS Nova Aurora          Lapa               55 min        190  Atenção  
+------------------------------------------------------------------------------
+ Total de UBS cadastradas: 3
+
+==============================================================================
+                            RELATÓRIO - INDICADORES                           
+==============================================================================
+  Tempo médio de espera ......: 48.3 min -> Atenção
+  Maior tempo de espera ......: 72 min (UBS Bela Vista - Bela Vista)
+  Menor tempo de espera ......: 18 min (UBS Jardim Sul - Campo Limpo)
+  Total de atendimentos/dia ..: 550
+
+  Quantidade e percentual por categoria:
+   - Adequado :   1 UBS ( 33.3%) ######
+   - Atenção  :   1 UBS ( 33.3%) ######
+   - Crítico  :   1 UBS ( 33.3%) ######
+
+==============================================================================
+                      CONCLUSÃO AUTOMÁTICA / RECOMENDAÇÕES                    
+==============================================================================
+  > Existe 1 UBS em nível CRÍTICO. Priorizar essa unidade na distribuição de profissionais.
+  > A espera média está 18.3 min acima da meta de 30 min. Sugere-se ampliar o agendamento prévio (por app ou telefone).
+  > Para o cidadão: quem for à 'UBS Bela Vista' (72 min) pode considerar a 'UBS Jardim Sul' (Campo Limpo), com espera de apenas 18 min.
+==============================================================================
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 9
+
+   [!] Opção inválida. Digite 0, 1, 2, 3, 4 ou 5.
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 4
+
+   [OK] 3 UBS de teste carregadas (Adequado, Atenção e Crítico).
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 3
+
+------------------------------------------------------------------------------
+ Nº  UBS                      Bairro            Espera Atend./dia  Situação 
+------------------------------------------------------------------------------
+ 1   UBS Bela Vista           Bela Vista         72 min        210  Crítico  
+ 2   UBS Jardim Sul           Campo Limpo        18 min        150  Adequado 
+ 3   UBS Nova Aurora          Lapa               55 min        190  Atenção  
+ 4   UBS Vila Esperança       Penha              25 min        180  Adequado 
+ 5   UBS Jardim das Flores    Itaquera           48 min        240  Atenção  
+ 6   UBS Parque Central       Sé                 95 min        320  Crítico  
+------------------------------------------------------------------------------
+ Total de UBS cadastradas: 6
+
+==============================================================================
+                            RELATÓRIO - INDICADORES                           
+==============================================================================
+  Tempo médio de espera ......: 52.2 min -> Atenção
+  Maior tempo de espera ......: 95 min (UBS Parque Central - Sé)
+  Menor tempo de espera ......: 18 min (UBS Jardim Sul - Campo Limpo)
+  Total de atendimentos/dia ..: 1290
+
+  Quantidade e percentual por categoria:
+   - Adequado :   2 UBS ( 33.3%) ######
+   - Atenção  :   2 UBS ( 33.3%) ######
+   - Crítico  :   2 UBS ( 33.3%) ######
+
+==============================================================================
+                      CONCLUSÃO AUTOMÁTICA / RECOMENDAÇÕES                    
+==============================================================================
+  > Existem 2 UBS em nível CRÍTICO. Priorizar essas unidades na distribuição de profissionais.
+  > A espera média está 22.2 min acima da meta de 30 min. Sugere-se ampliar o agendamento prévio (por app ou telefone).
+  > Para o cidadão: quem for à 'UBS Parque Central' (95 min) pode considerar a 'UBS Jardim Sul' (Campo Limpo), com espera de apenas 18 min.
+==============================================================================
+
++------------------------- MENU -------------------------+
+|  1 - Cadastrar UBS                                     |
+|  2 - Listar UBS cadastradas                            |
+|  3 - Consultar relatório (indicadores e recomendação)  |
+|  4 - Carregar dados de teste (3 UBS de exemplo)        |
+|  5 - Ver regras de classificação                       |
+|  0 - Encerrar o programa                               |
++--------------------------------------------------------+
+Escolha uma opção: 0
+
+Encerrando o Fila Zero. Obrigado por cuidar da saúde da sua comunidade!
