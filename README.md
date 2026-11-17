@@ -1,15 +1,45 @@
 # FILA ZERO – Monitor de Tempo de Espera nas UBS
 
+![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)
+![Sem dependências externas](https://img.shields.io/badge/depend%C3%AAncias-nenhuma-brightgreen)
+[![Testes](https://github.com/FelipeArrudaCalixto/fila-zero-ubs/actions/workflows/testes.yml/badge.svg)](https://github.com/FelipeArrudaCalixto/fila-zero-ubs/actions/workflows/testes.yml)
+
+Programa de terminal em Python que monitora o tempo de espera das Unidades Básicas de
+Saúde, classifica cada unidade como **Adequado**, **Atenção** ou **Crítico** e gera
+recomendações automáticas: para o gestor, onde reforçar equipes; para o cidadão, qual
+UBS procurar.
+
+**[Assista ao vídeo pitch (YouTube)](https://youtu.be/a0WjoFRxdUY)**
+
+### Destaques
+
+- **Python puro:** 20 funções, nenhuma biblioteca externa.
+- **5 indicadores** (média, maior e menor espera, total de atendimentos, distribuição por categoria) e uma recomendação automática gerada por regras.
+- **Entradas validadas:** texto vazio, números fora da faixa e opções inválidas são tratados sem quebrar o programa.
+- **Testes automatizados** que rodam a cada push via GitHub Actions.
+
+### Teste em 30 segundos
+
+```bash
+git clone https://github.com/FelipeArrudaCalixto/fila-zero-ubs.git
+cd fila-zero-ubs
+python fila_zero.py
+```
+
+No menu, escolha **4** para carregar 3 UBS de exemplo e depois **3** para ver o relatório.
+
+---
+
 **FIAP – 1º ano de Ciência da Computação – Turma 1CCPR**
 Pensamento Computacional e Automação em Python – Prof. Allan Roberto Molto
 **Global Solution 2026.2 | CitizenTech**
 
 ## Integrantes
 
-| Nome                      | RM       |
-|---------------------------|----------|
-| Felipe Arruda Calixto     | RM574454 |
-| Felipe Oliveira Barcelos  | RM576561 |
+| Nome                      | RM       | GitHub |
+|---------------------------|----------|--------|
+| Felipe Arruda Calixto     | RM574454 | [@FelipeArrudaCalixto](https://github.com/FelipeArrudaCalixto) |
+| Felipe Oliveira Barcelos  | RM576561 | |
 
 ---
 
@@ -37,6 +67,7 @@ Desigualdades; ODS 11 – Cidades e Comunidades Sustentáveis.
 | `exemplo_execucao.txt`  | Execução completa registrada, incluindo entradas inválidas    |
 | `roteiro_pitch.md`      | Roteiro do vídeo pitch (1 a 2 minutos)                        |
 | `README.md`             | Este documento                                                |
+| `.github/workflows/testes.yml` | Roda os testes automáticos no GitHub Actions a cada push |
 
 ---
 
@@ -166,7 +197,8 @@ def classificar_espera(tempo):
 
 Os testes conferem os limites exatos de cada faixa (30/31 e 60/61 min), média, total,
 maior e menor valor, contagem por categoria, percentual, lista vazia, divisão por zero
-e os três tipos de recomendação. Saída obtida:
+e os três tipos de recomendação. Eles rodam automaticamente no GitHub Actions a cada
+push (workflow `.github/workflows/testes.yml`). Saída obtida:
 
 ```
 [OK] classificar_espera
